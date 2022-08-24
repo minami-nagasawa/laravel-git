@@ -77,8 +77,8 @@ docker-compose up -d
 Laravel関連のコマンドはDockerで用意した、WEBサーバー（コンテナ）上で行います。
 
 ```bash
-# ■ Git Bashで入力
-# WEBサーバーに入るコマンド
+# ターミナルで実行
+## WEBサーバーに入るコマンド
 docker exec -it laravel9-web bash
 ```
 
@@ -140,7 +140,7 @@ chmod -R 777 storage/
 
 #### 言語ファイルダウンロード
 
-※ 以下は導入済みです  
+※ **以下は導入済みです**  
 
 「[`resources/lang/`](./root/resources/lang/)」に「`ja`」ディレクトリが生成され4つの言語ファイルが追加されます。  
 ※ 2022/07 現在、Laravel8向けの言語ファイルしか用意されていません。  
@@ -170,7 +170,7 @@ rmdir resources/lang/
 
 #### app.php
 
-※ 以下は設定済みです  
+※ **以下は導入済みです**  
 
 `config/app.php` の日本設定を行います。
 
@@ -178,12 +178,12 @@ rmdir resources/lang/
 | --- | :---: | --- |
 | timezone | `Asia/Tokyo` | デフォルト: `UTC` |
 | locale  | `ja` | デフォルト: `en` |
-| fallback_locale' | `en` | デフォルト: `en`<br>locale の言語が見つからない場合に適用する言語<br>デフォルトの`en`を指定するのが良い |
+| fallback_locale | `en` | デフォルト: `en`<br>locale の言語が見つからない場合に適用する言語<br>デフォルトの`en`を指定するのが良い |
 | faker_locale | `ja_JP` | デフォルト: `en_US` |
 
 #### Laravel Debugbar
 
-※ 以下は導入済みです  
+※ **以下は導入済みです**  
 
 Laravelで作成した画面の下にデバッグバーが表示され、様々な情報が見れるようになります。
 
