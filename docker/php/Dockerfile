@@ -1,8 +1,8 @@
-FROM php:8.1.8-apache
+FROM php:8.1.14-apache
 # php.iniをコピー
 COPY ./php.ini /usr/local/etc/php/
 # composer インストール (マルチステージビルド)
-COPY --from=composer:2.3.10 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.5.1 /usr/bin/composer /usr/bin/composer
 # apt(Advanced Package Tool) パッケージインストール
 # PDO driver インストール(mysql)
 # mod_rewrite 有効化
