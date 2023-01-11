@@ -103,7 +103,8 @@ cd /var/www/root
 # 「.env」ファイル
 ## 「.env.dev」ファイルを「.env」にコピー
 cp .env.dev .env
-# storage ディレクトリに読み取り・書き込み権限を与える（storage内に書き込み（ログ出力時等）に「Permission denied」のエラーが発生する）
+# storage ディレクトリに読み取り・書き込み権限を与える（bootstrap, storage内に書き込み（ログ出力時等）に「Permission denied」のエラーが発生する）
+chmod -R 777 bootstrap/cache/
 chmod -R 777 storage/
 ```
 
