@@ -82,6 +82,8 @@ Laravel関連のコマンドはDockerで用意した、WEBサーバー（コン�
 docker exec -it laravel9-web bash
 ```
 
+VSCodeの[Docker拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)が入っている場合、対象コンテナの「Attach Shell」でも開けます。  
+
 #### composer install
 
 ```bash
@@ -111,10 +113,13 @@ chmod -R 777 storage/
 ### 確認
 
 - WEB ※ ポート番号は [`.env`](./.env) の `PORT_WEB` を参照
-  - <http://localhost:80/>  
-    [htdocs/index.php](./htdocs/index.php)の実行結果が画面に表示されます。
+  - <http://localhost:80/> （または <http://127.0.0.1:80/> ）  
+    [routes/web.php](./root/routes/web.php)のURI「`'/'`」の実行結果が画面に表示されます。  
+    VSCodeの[Docker拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)が入っている場合、対象コンテナの「Open in Browser」でも開けます。
+
 - phpMyAdmin ※ ポート番号は [`.env`](./.env) の `PORT_PHPMYADMIN` を参照
-  - <http://localhost:8080>
+  - <http://localhost:8080> （または <http://127.0.0.1:8080/> ）  
+    VSCodeの[Docker拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)が入っている場合、対象コンテナの「Open in Browser」でも開けます。
 
 ### SQLクライアント
 
