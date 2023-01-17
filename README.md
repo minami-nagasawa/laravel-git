@@ -187,6 +187,24 @@ rmdir resources/lang/
 | fallback_locale | `en` | デフォルト: `en`<br>locale の言語が見つからない場合に適用する言語<br>デフォルトの`en`を指定するのが良い |
 | faker_locale | `ja_JP` | デフォルト: `en_US` |
 
+#### .env.testing設定
+
+※ **以下は導入済みです（migrationは必要）**  
+
+Laravel UnitTest用の設定を行います。  
+[.env.testing](./root/.env.testing)ファイルを作成し、DB_*にテスト用データベース（laravel_test）を設定します。  
+UnitTest実行時に.envファイルの代わりに使われるためAPP_KEYなどの設定も必要です。  
+
+テスト用データベースにmigrationを適用には、以下のコマンドを実行します。  
+
+```sh
+php artisan migrate --env=testing
+```
+
+- `Laravel 9.x テスト: テストの準備`
+  - <https://readouble.com/laravel/9.x/ja/testing.html>
+
+
 #### Laravel Debugbar
 
 ※ **以下は導入済みです**  
