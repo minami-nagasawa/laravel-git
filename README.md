@@ -78,7 +78,7 @@ Laravel関連のコマンドはDockerで用意した、WEBサーバー（コン�
 
 ```bash
 # ターミナルで実行
-## WEBサーバーに入るコマンド
+## WEBサーバーに入るコマンド（-itの後に入る名称はコンテナ名「{NAME_PREFIX}-web」）
 docker exec -it laravel9-web bash
 ```
 
@@ -203,7 +203,6 @@ php artisan migrate --env=testing
 
 - `Laravel 9.x テスト: テストの準備`
   - <https://readouble.com/laravel/9.x/ja/testing.html>
-
 
 #### Laravel Debugbar
 
