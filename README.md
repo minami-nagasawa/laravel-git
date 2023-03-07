@@ -54,7 +54,8 @@ Dockerを使って環境を構築します。
 
 ### .env
 
-[.env](./.env)ファイルの各名称・ポート設定をしてください。  
+[.env](./.env)ファイルはDockerの環境ファイルです。  
+各名称・ポート設定をしてください。  
 基本的にはそのまま使用可能ですが、IPとポートが重複するとコンテナが起動しないので  
 自身の環境に合わせて設定を変えてください。
 
@@ -112,14 +113,13 @@ chmod -R 777 storage/
 
 ### 確認
 
-- WEB ※ ポート番号は [`.env`](./.env) の `PORT_WEB` を参照
-  - <http://localhost:80/> （または <http://127.0.0.1:80/> ）  
+- WEB ※ **IP・ポート番号は [`.env`](./.env) の `IP`・`PORT_WEB` を参照**
+  - <http://127.0.0.1:80/> （デフォルト設定のURL）  
     [routes/web.php](./root/routes/web.php)のURI「`'/'`」の実行結果が画面に表示されます。  
-    VSCodeの[Docker拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)が入っている場合、対象コンテナの「Open in Browser」でも開けます。
-
-- phpMyAdmin ※ ポート番号は [`.env`](./.env) の `PORT_PHPMYADMIN` を参照
-  - <http://localhost:8080> （または <http://127.0.0.1:8080/> ）  
-    VSCodeの[Docker拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)が入っている場合、対象コンテナの「Open in Browser」でも開けます。
+    VSCodeの[Docker拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)が入っている場合、対象コンテナの「Open in Browser」でも開けます。  
+- phpMyAdmin ※ **IP・ポート番号は [`.env`](./.env) の `IP`・`PORT_PHPMYADMIN` を参照**
+  - <http://127.0.0.1:8080> （デフォルト設定のURL）  
+    VSCodeの[Docker拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)が入っている場合、対象コンテナの「Open in Browser」でも開けます。  
 
 ### SQLクライアント
 
